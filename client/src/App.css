@@ -1,0 +1,26 @@
+html, body{
+  font: 13px / 18px;
+  -webkit-font-smoothing: antialiased;
+  height:100%;
+}
+.App{
+  background:linear-gradient(to bottom, #5b5b77 50%, #29283b 100%);
+  min-height:900px;
+}
+.navbar{
+  font-family: "Niramit", serif;
+}
+.App .navbar-brand {
+  font-weight: bold;
+}
+.navbar .role {
+  margin-right:12px !important;
+}
+.device-nav-bar {
+  background-color:#2C3E50;
+}
+.person-icon{
+  background-color:transparent;
+  display:inline-block;
+  padding-right:10px;
+}

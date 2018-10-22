@@ -1,0 +1,170 @@
+.device-list-wrapper {
+  padding-top: 150px;
+}
+.col-hidden {
+  display: none;
+}
+.react-bs-table-container td {
+  font-family: "Niramit", serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #0c0c0c;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  overflow: hidden;
+}
+.react-bs-table-container td {
+  border-right-style: hidden;
+}
+.action-btn {
+  box-sizing: border-box;
+  border: none;
+  display: block;
+  padding: 0px 0 0 10px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px !important;
+  border-radius: 2em !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: box-shadow 250ms cubic-bezier(0.02, 0.01, 0.47, 1),
+    transform 250ms cubic-bezier(0.02, 0.01, 0.47, 1),
+    background-color 250ms ease-in-out, color 250ms ease-in-out;
+  background: #559cff;
+}
+.react-bs-table-add-btn {
+  width: 250px;
+}
+.save-device-btn {
+  width: 100px;
+}
+.react-bs-table-add-btn:focus,
+.react-bs-table-add-btn:active {
+  background: #559cff !important;
+}
+.react-bs-table-add-btn:before {
+  font: 30px / 40px;
+  position: absolute;
+  top: 0;
+  left: 43px;
+  font-family: FontAwesome;
+  content: "\f067";
+  display: inline-block;
+  padding-right: 4px;
+  padding-top: 7px;
+  vertical-align: middle;
+  color: #fff;
+}
+.status-btn {
+  cursor: pointer;
+  line-height: 26px;
+  margin: 0 8px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 8px;
+  vertical-align: top;
+  overflow: hidden;
+  color: #0c0c0c;
+  width: 100px;
+  border-radius: 13px;
+  background-color: #ffcb2b;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.status-btn:focus,
+.react-bs-table-container td:focus {
+  outline: none;
+}
+.info {
+  color: #fff;
+  font-family: "Mukta", serif;
+}
+.delbutton {
+  display: block;
+  width: 50%;
+  border: none;
+  background-color: #4caf50;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.fade:not(.show) {
+  opacity: 1;
+}
+.modal-backdrop {
+  opacity: 0.25 !important;
+}
+.modal-header {
+  display: block;
+  background: linear-gradient(to bottom, #5b5b77 50%, #29283b 100%);
+  color: #fff;
+}
+.modal-content {
+  margin-top: 150px;
+  font-family: "Niramit", serif;
+}
+.modal-content .close {
+  color: #fff;
+  opacity: 1;
+}
+.modal-content .help-block {
+  margin-top: -16px;
+  margin-bottom: 32px;
+}
+.react-bs-table-container {
+  height: 100%;
+}
+.react-bs-container-body {
+  height: 95% !important;
+  overflow-y: scroll;
+}
+.redStatus{
+    color: #EF6185;
+}
+.greenStatus {
+    color:#36d8d6;
+}
+table td:last-child{
+  border-right: 1px solid #dee2e6;
+}
+.device-list-wrapper {
+  padding-bottom:20px;
+  padding-left:33px;
+  padding-right:33px;
+  min-height:900px;
+}
+.device-list-wrapper table{
+  border-collapse: collapse;
+  /* border-collapse: separate !important; */
+  border-spacing: 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.device-list-wrapper tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.device-list-wrapper tbody td:nth-child(2){
+  padding-left:40px
+}
+.statusCell{
+  font-family: "Righteous", serif;
+  padding-left:20px;
+}
+.statusIcon{
+  color:#008000;
+}
+.device-list-wrapper  table i{
+  font-size:1.5em;
+}
+.badge-wrapper{
+  font-size:1.5em;
+}
