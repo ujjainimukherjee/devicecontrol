@@ -1,7 +1,10 @@
 export default function LocalServiceWorkerRegister() {
   const swPath = `${process.env.PUBLIC_URL}/sw.js`;
   const publicVapidKey = "BMi4mXIVwd2YMBj-7C5GH5p_WOnuqKILiDkXV7j8e4msHB7_laeucCRaivuICv2Q_QKmWeAC1pwV0Ts0L8FXQ6I";
-  if ("serviceWorker" in navigator && process.env.NODE_ENV !== "production") {
+  // if ("serviceWorker" in navigator && process.env.NODE_ENV !== "production") {
+  //   register();
+  // }
+  if ("serviceWorker" in navigator) {
     register();
   }
   function register() {
