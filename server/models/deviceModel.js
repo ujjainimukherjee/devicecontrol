@@ -1,6 +1,4 @@
-'use strict';
-
-var Datastore = require('nedb'),
+const Datastore = require('nedb'),
 
 devicesDb = new Datastore({
      filename: __dirname + '/../../db/devices.db',

@@ -1,14 +1,11 @@
 const bcrypt = require('bcryptjs');
-var usersModel = require('../models/userModel.js');
-//var authToken = require('./authToken');
-var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
-//var bcrypt = require('bcryptjs');
-var config = require('../config'); //
+const usersModel = require('../models/userModel.js');
+const jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
+const config = require('../config');
 
 exports.session_login_on_post = function(req, res) {
-    var postData = req.body,
+    const postData = req.body,
     validationError = { type: 'Validation Error', message: '' };
-
     if (!postData.username) {
         validationError.message = 'User Name is required';
     } else if(!postData.password) {
@@ -18,7 +15,6 @@ exports.session_login_on_post = function(req, res) {
         res.status(400).json(validationError);
         return;
     }
-
     usersModel.findOne({ username: postData.username }, function(err, user) {
         if (err) {
             res.status(500).send(err);
@@ -38,7 +34,6 @@ exports.session_login_on_post = function(req, res) {
                        message: 'password not correct' });
             return;
         }
-
         console.log('login successful');
         var token = jwt.sign({ "id": user._id, "role": user.role }, config.salt, {
                 expiresIn: 30000 // expires after interval
@@ -50,7 +45,5 @@ exports.session_login_on_post = function(req, res) {
 };
 
 exports.session_logout_on_delete = function(req, res) {
-    // What to do? remove a session from session DB
-    // What about timeout ?
     res.status(200).json({ auth: false, token: null });
 };

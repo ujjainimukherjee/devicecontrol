@@ -1,10 +1,9 @@
 // Any control logic & use of data model should be added here
-var devicesModel = require('../models/deviceModel.js');
+const devicesModel = require('../models/deviceModel.js');
 
 exports.index = function(req, res) {
       res.send('NOT IMPLEMENTED: Site Home Page');
 };
-
 // Display list of all devices.
 exports.device_list = function(req, res) {
      devicesModel.find({}, function(err, alldevices) {
@@ -13,16 +12,12 @@ exports.device_list = function(req, res) {
              return;
          }
          res.json({devices: alldevices});
-         //res.json(alldevices);
      });
 };
-
-//
 // Handle device create on POST.
 exports.device_add_on_post = function(req, res) {
     var postData = req.body,
     validationError = { type: 'Validation Error', message: '' };
-
     if (!postData.devicename) {
         validationError.message = 'Device Name is required';
     }
