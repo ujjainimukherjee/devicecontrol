@@ -1,10 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var authToken = require('../controllers/authToken');
+const express = require('express');
+const router = express.Router();
 
-var session_controller = require('../controllers/sessioncontroller');
-
-// GET could get the login page
+const authToken = require('../controllers/authToken');
+const session_controller = require('../controllers/sessioncontroller');
 
 // POST request for login
 router.post('/', session_controller.session_login_on_post);

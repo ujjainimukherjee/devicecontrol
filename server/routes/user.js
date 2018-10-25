@@ -1,12 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var user_controller = require('../controllers/usercontroller');
-var adminAccess = require('../controllers/adminAccess');
+const user_controller = require('../controllers/usercontroller');
+const adminAccess = require('../controllers/adminAccess');
 
 // GET user home page.
 router.get('/', user_controller.user_list);
-//
+
 // POST request for creating user.
 router.post('/', adminAccess, user_controller.user_add_on_post);
 

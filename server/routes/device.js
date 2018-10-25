@@ -1,11 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var device_controller = require('../controllers/devicecontroller');
-var adminAccess = require('../controllers/adminAccess');
+const device_controller = require('../controllers/devicecontroller');
+const adminAccess = require('../controllers/adminAccess');
 
 // GET device home page.
-//router.get('/', adminAccess, device_controller.device_list);
 router.get('/', device_controller.device_list);
 
 // POST request for creating device.
