@@ -27,8 +27,8 @@ exports.device_add_on_post = function(req, res) {
     }
     devicesModel.findOne({ devicename: postData.devicename }, function(err, device) {
         if (err) {
+            // error finding device
             res.status(500).send(err);
-            console.log('Error finding device');
             return;
         }
         if (device) {
@@ -43,7 +43,6 @@ exports.device_add_on_post = function(req, res) {
                     res.send(err);
                     return;
                 }
-                console.log(newDevice);
                 res.status(201).json(newDevice);
             });
         }
@@ -84,11 +83,8 @@ exports.device_update_on_put = function(req, res) {
                          + req.params.id + '".' });
               return;
           }
-          console.log('hello here!');
           for (prop in req.body) {
               if (prop !== '_id') {
-                  console.log('her i am');
-                  //console.log(`Put for property ${prop} of device ${req.params.id}`);
                   device[prop] = req.body[prop];
               }
           }

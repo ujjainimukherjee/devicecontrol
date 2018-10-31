@@ -44,7 +44,6 @@ app.post('/v1/listeners', (req, res) => {
     const subscription = req.body;
     res.status(201).json({});
     const payload = JSON.stringify({ title: 'HOME DEVICES' });
-    console.log(subscription);
     webpush.sendNotification( subscription, payload).catch(error => {
         console.error(error.stack);
     });

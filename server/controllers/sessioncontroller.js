@@ -17,8 +17,8 @@ exports.session_login_on_post = function(req, res) {
     }
     usersModel.findOne({ username: postData.username }, function(err, user) {
         if (err) {
+            // User could not be found
             res.status(500).send(err);
-            console.log('Error finding user');
             return;
         }
         if (user === null) {
@@ -29,12 +29,10 @@ exports.session_login_on_post = function(req, res) {
         }
         // check if password matches
         if (!bcrypt.compareSync(postData.password, user.password)) {
-            console.log('Password not matching');
             res.status(401).json({ auth: false,
                        message: 'password not correct' });
             return;
         }
-        console.log('login successful');
         var token = jwt.sign({ "id": user._id, "role": user.role }, config.salt, {
                 expiresIn: 30000 // expires after interval
         });

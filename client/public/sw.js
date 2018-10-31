@@ -1,4 +1,3 @@
-console.log('Loaded service worker!');
 self.addEventListener('fetch', function(event){
     console.log('fetching');
     console.log(event.request);

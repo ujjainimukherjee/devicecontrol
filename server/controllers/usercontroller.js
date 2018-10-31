@@ -25,8 +25,8 @@ exports.user_add_on_post = function(req, res) {
 
     usersModel.findOne({ username: postData.username }, function(err, user) {
         if (err) {
+            // Error finding user
             res.status(500).send(err);
-            console.log('Error finding user');
             return;
         }
         if (user) {
@@ -43,7 +43,6 @@ exports.user_add_on_post = function(req, res) {
                     res.status(500).send(err);
                     return;
                 }
-                console.log(newUser);
                 res.status(201).json(newUser);
             });
         }

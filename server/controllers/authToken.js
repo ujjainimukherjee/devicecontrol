@@ -3,11 +3,10 @@ const config = require('../config'); // get our config file
 
 function authToken(req, res, next) {
     // check header/ url parameters or post parameters for token
-    const token = null;
+    let token;
     if (req.headers.authorization &&
         req.headers.authorization.split(' ')[0] === 'Bearer') {
         // Handle token presented as a Bearer token in the Authorization header
-        console.log('Found Authorization Bearer token');
         token = req.headers.authorization.split(' ')[1];
     }
     if (!token) {
