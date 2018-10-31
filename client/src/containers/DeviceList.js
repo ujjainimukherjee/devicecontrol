@@ -74,7 +74,7 @@ class DeviceList extends Component {
         status: toggleValue
       })
       .then(response => {
-        console.log(response);
+        // successful response
       })
       .catch(error => {
         console.log(error);
@@ -152,7 +152,7 @@ class DeviceList extends Component {
     axios
       .delete(`/v1/devices/${row._id}`)
       .then(response => {
-        console.log(response);
+        // successful response
       })
       .catch(error => {
         console.log(error);
@@ -169,7 +169,7 @@ class DeviceList extends Component {
         devicename: cellValue
       })
       .then(response => {
-        console.log(response);
+        // successful response
       })
       .catch(error => {
         console.log(error);
